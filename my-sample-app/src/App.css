@@ -1,0 +1,24 @@
+.App {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Devops-toolchain.svg/1200px-Devops-toolchain.svg.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #00FF00; /* Bright green */
+}
+.devops-icon {
+  width: 100px;
+  height: 100px;
+}
+
