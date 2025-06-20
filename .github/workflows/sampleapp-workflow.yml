@@ -14,9 +14,9 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      AWS_REGION: us-east-2
-      ECR_REPOSITORY: simple-node-app
-      AWS_ACCOUNT_ID: 851725548201
+      AWS_REGION: us-east-1
+      ECR_REPOSITORY: sampleapplication
+      AWS_ACCOUNT_ID: 160885263219
       IMAGE_TAG: ${{ github.sha }}
 
     steps:
@@ -26,7 +26,7 @@ jobs:
     - name: Configure AWS credentials with OIDC
       uses: aws-actions/configure-aws-credentials@v2
       with:
-        role-to-assume: arn:aws:iam::851725548201:role/github-actions-ecr-role
+        role-to-assume: arn:aws:iam::160885263219:role/githubaction
         aws-region: ${{ env.AWS_REGION }}
 
     - name: Login to Amazon ECR
