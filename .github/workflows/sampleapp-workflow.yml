@@ -37,6 +37,3 @@ jobs:
 
         docker build -t $IMAGE_URI .
         docker push $IMAGE_URI
-
-    - name: Output image URI
-      run: echo "Image pushed: $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPOSITORY:$IMAGE_TAG"
