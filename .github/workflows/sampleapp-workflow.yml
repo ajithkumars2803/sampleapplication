@@ -29,7 +29,7 @@ jobs:
         with:
           args: >
             -Dsonar.projectKey=sampleapplocal
-            -Dsonar.projectName=Sample App Local
+            -D"sonar.projectName=sampleapplocal"
             -Dsonar.sources=.
 
   docker:
