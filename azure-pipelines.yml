@@ -16,14 +16,18 @@ stages:
   displayName: Build image
   jobs:
   - job: Build
-    displayName: Build
+    displayName: Build Docker image
     pool:
       vmImage: ubuntu-latest
     steps:
+    - checkout: self
+      fetchDepth: 1
+
     - task: Docker@2
-      displayName: Build an image
+      displayName: Build Docker image
       inputs:
         command: build
+        repository: my-sample-app
         dockerfile: '$(Build.SourcesDirectory)/my-sample-app/Dockerfile'
         tags: |
           $(tag)
